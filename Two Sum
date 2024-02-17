@@ -1,0 +1,26 @@
+1. Two Sum
+
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        if len(nums) == 2:
+            return [0,1]
+
+        dic = dict()
+
+        for index, num in enumerate(nums):
+            dic[num] = index
+
+        for i in range(len(nums)):
+            if target - nums[i] not in dic:
+                continue
+            else:
+                if dic[target - nums[i]] == i:
+                    continue
+                return [i, dic[target - nums[i]]]
+            
+        
