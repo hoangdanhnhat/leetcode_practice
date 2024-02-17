@@ -1,3 +1,3 @@
 # DESCRIPTION
 
-bassically practicing leetcode
+This is a description
